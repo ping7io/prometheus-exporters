@@ -1,0 +1,23 @@
+name: continuous integration
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - feature/**
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        exporter: [ "blackbox-exporter" ]
+
+    steps:
+      - name: build Docker file
+        uses: docker/build-push-action@v2
+        with:
+          context: ${{ matrix.exporter }}
+          push: false
