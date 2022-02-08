@@ -19,5 +19,6 @@ jobs:
       - name: build Docker file
         uses: docker/build-push-action@v2
         with:
-          context: ${{ matrix.exporter }}
+          context: .
+          file: ${{ matrix.exporter }}/Dockerfile
           push: false
