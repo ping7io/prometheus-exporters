@@ -16,9 +16,10 @@ jobs:
         exporter: [ "blackbox-exporter" ]
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: build Docker file
         uses: docker/build-push-action@v2
         with:
-          context: .
           file: ${{ matrix.exporter }}/Dockerfile
           push: false
