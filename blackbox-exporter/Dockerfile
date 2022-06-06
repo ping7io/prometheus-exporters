@@ -1,4 +1,4 @@
-FROM prom/blackbox-exporter:v0.20.0 as bbe
+FROM prom/blackbox-exporter:v0.21.0 as bbe
 
 FROM alpine:3.15
 RUN apk update && apk add libcap
