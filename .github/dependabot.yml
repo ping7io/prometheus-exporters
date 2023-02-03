@@ -1,9 +1,16 @@
 version: 2
 updates:
   - package-ecosystem: "docker"
-    directory: "/blackbox-exporter"
+    directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
     reviewers:
-      - "tboeghk"
+      - tboeghk
+      - henriknik
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - tboeghk
+      - henriknik
