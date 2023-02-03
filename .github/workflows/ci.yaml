@@ -16,7 +16,7 @@ jobs:
         exporter: [ "blackbox-exporter" ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: build Docker file
         uses: docker/build-push-action@v2
